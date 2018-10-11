@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo Abdes</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <input type="submit" onclick="Demo(); return false;" />
+    <br /><br />
+    <div id="data"></div>
+
+</body>
+<script type="csharp" id="csharp" language="csharp">
+
+    using System;
+
+    // The namespace, class name and the method name shouldn't change
+    namespace Abdes
+    {
+        public class  Program
+        {
+            public string Main()
+            {
+                return "Hello, World!";
+            }
+        }
+    }
+
+</script>
+
+<script type="text/javascript">
+
+    function Demo() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:50775/api/abdes",
+            data:
+            {
+                language: $("#csharp").attr('language'),
+                code: $("#csharp").html()
+            },
+            success: function (results) {
+                if (results.status == 0) {
+                    console.log(results);
+                    $('#data').html('Result: ' + results.data);
+                }
+                else {
+                    console.log('Request failed.  Returned message: ' + results.message);
+                }
+            },
+            fail: function (data, status) {
+                console.log('Request failed.  Returned status of ' + status);
+            }
+
+        });
+    }
+
+</script>
+</html>

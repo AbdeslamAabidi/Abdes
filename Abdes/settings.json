@@ -1,0 +1,19 @@
+﻿{
+  "RegistredScripts": [
+    {
+      "language": "csharp",
+      "name": "myfirstscript",
+      "sha256": "ef9faa63f5cd1a0245f3e93c3e621f1df0450ab4d557097a97486d97615d7c68"
+    },
+    {
+      "language": "csharp",
+      "name": "newscript",
+      "sha256": "c4c6c59a07aa6b4152c5302b537b374cc43233c6e0742973c79f68ff0960c211"
+    },
+    {
+      "language": "csharp",
+      "name": "demo1",
+      "sha256": "078567d86af3055fa963b211c253e6ede1e30bbd19145c7bc2280e6eb42e58b9"
+    }
+  ]
+}
