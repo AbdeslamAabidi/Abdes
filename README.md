@@ -1,7 +1,7 @@
 Abdes
 =====
 
-Abdes API is compiling and executing scripts (C#, PHP, Python, ...) from the client side.
+Abdes API is compiling and executing scripts C# from the client side.
 For reason of security and preventing changes of a script on the client side, you need to generate sha256 for your script and add it to JSON file "settings.json."
 
 ## Versions 
